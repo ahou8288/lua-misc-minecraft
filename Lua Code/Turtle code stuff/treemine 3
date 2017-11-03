@@ -1,0 +1,97 @@
+local x=0
+
+turtle.turnLeft()
+turtle.turnLeft()
+turtle.dig()
+turtle.forward()
+turtle.turnLeft()
+
+turtle.select(15)
+turtle.dig()
+turtle.forward()
+turtle.dig()
+turtle.place()
+turtle.back()
+turtle.place()
+turtle.turnRight()
+turtle.dig()
+turtle.forward()
+turtle.turnLeft()
+turtle.dig()
+turtle.forward()
+turtle.dig()
+turtle.place()
+turtle.back()
+turtle.place()
+print("Saplings are Down")
+
+turtle.select(15)
+while turtle.compare() do
+	turtle.select(16)
+	turtle.place()
+	turtle.select(15)
+	print("used bonemeal..")
+end
+print("tree grown")
+
+turtle.dig()
+turtle.forward()
+
+turtle.select(2)
+while turtle.digUp() do
+	turtle.dig()
+	turtle.digUp()
+	turtle.up()
+ x=x+1
+end
+
+turtle.turnLeft()
+turtle.dig()
+turtle.forward()
+turtle.turnRight()
+
+print("tree was "..x.." high")
+
+repeat
+	turtle.dig()
+	turtle.digDown()
+	turtle.down()
+ x=x-1
+until x==0
+turtle.dig()
+print("tree mined!")
+
+turtle.turnLeft()
+turtle.turnLeft()
+turtle.dig()
+turtle.forward()
+
+turtle.select(3)
+turtle.drop()
+turtle.select(4)
+turtle.drop()
+turtle.select(5)
+turtle.drop()
+turtle.select(6)
+turtle.drop()
+turtle.select(7)
+turtle.drop()
+turtle.select(8)
+turtle.drop()
+turtle.select(9)
+turtle.drop()
+turtle.select(10)
+turtle.drop()
+turtle.select(12)
+turtle.drop()
+turtle.select(13)
+turtle.drop()
+turtle.select(14)
+turtle.drop()
+print("Items dropped")
+
+turtle.turnRight()
+turtle.dig()
+turtle.forward()
+print("you are experiencing a car accident")
+print("would you like to play again?")

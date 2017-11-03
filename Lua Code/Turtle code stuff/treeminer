@@ -1,0 +1,28 @@
+local x = 0
+turtle.select(2)
+while turtle.compareUp() do
+  if turtle.getFuelLevel() < 200 then
+    turtle.select(1)
+    turtle.refuel()
+    turtle.select(2)
+  end
+  turtle.digUp()
+  turtle.dig()
+  turtle.up()
+  x = x + 1
+end
+
+turtle.turnRight()
+turtle.dig()
+turtle.forward()
+turtle.turnLeft()
+
+local i = 1
+repeat
+  turtle.dig()
+  turtle.digDown()
+  turtle.down()
+  i = i + 1
+until i == x
+
+Print"finished"

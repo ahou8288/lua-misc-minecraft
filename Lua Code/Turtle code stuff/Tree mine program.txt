@@ -1,0 +1,25 @@
+Local i=0
+
+while turtle.getFuelLevel() < 200 then
+	turtle.select(1)	
+	turtle.refuel()
+end
+
+while turtle.detectUp() do
+	turtle.dig()
+	turtle.digUp()
+	turtle.up()
+	i=i+1
+end
+
+Print("Tree Hight:"..x)
+
+
+repeat
+	turt;e.dig()
+	turtle.digDown()
+	turtle.down()
+	i=i-1
+until i == 0
+
+Print"Finished"

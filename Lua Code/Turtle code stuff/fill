@@ -1,0 +1,27 @@
+a=0
+while a < 10 do
+i=0
+  repeat
+    turtle.dig()
+    turtle.place()
+    turtle.turnLeft()
+    turtle.dig()
+    turtle.forward()
+    turtle.turnRight()
+    i=i+1
+  until i == 8
+  i=0
+  turtle.up()
+  repeat
+    turtle.dig()
+    turtle.place()
+    turtle.turnRight()
+    turtle.dig()
+    turtle.forward()
+    turtle.turnLeft()
+  i=i+1
+  until i == 8
+turtle.down()
+turtle.back()
+a = a+1
+end

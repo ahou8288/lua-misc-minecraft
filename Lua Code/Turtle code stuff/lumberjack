@@ -1,0 +1,26 @@
+ 
+ while x ~= 1
+ turtle.dig()
+ turtle.forward()
+ while turtle.detectUp() do
+   turtle.digUp()
+   turtle.up()
+ end
+ while not turtle.detectDown() do
+   turtle.down()
+ end
+ 
+ turtle.select(1)
+ turtle.place()
+ 
+ turtle.select(2)
+ turtle.place()
+ turtle.select(1)
+ if turtle.compare() == true then
+ turtle.select(2)
+ turtle.place()
+ turtle.select(1)
+ end
+ 
+ turtle.suck()
+ end

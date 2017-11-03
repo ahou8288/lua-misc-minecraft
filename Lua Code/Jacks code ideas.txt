@@ -1,0 +1,64 @@
+Enter portal -You step into the dungeon.
+-You enter a dark howling glade.
+Search path
+- You may travel; North, east, south.
+Travel north
+- You enter a purple singing grove. There is a grinning blue troll.
+I want to walk up to the troll and kill it.
+- Please input a valid action: eg, Travel, search, help, talk.
+Talk troll
+- The troll refuses to respond.
+- The troll swings his rock at you. You take 3 damage.
+Attack troll
+- How will you attack? Your valid attacks are: Punch, kick.
+punch troll
+- You punch the troll. It takes 2 damage. It dies.
+search path
+- You may travel: North, east, south.
+search room
+- There is a:
+- * troll corpse
+- In the room.
+search troll corpse
+- You find:
+- * A rock
+loot troll corpse
+- You find a rock on the troll corpse.
+stats
+- You are:
+* Level one
+* No description
+* No skills
+* No stat points
+travel east
+- You enter a serenely groaning forest pool.
+search room
+- There is a:
+* Nothing
+- In the room
+equip rock
+* you have nothing equipped, use wield <x> to wield a weapon.
+wield rock
+- You wield a rock.
+rock stats
+- You start to rock out.
+search rock
+- This is an invalid command, did you mean search room?
+travel east
+- You enter a slowly swaying path. There is a evily singing toad.
+seach evily singing toad
+- You cannot find a evilly singing toad on the floor.
+travel east
+- You enter a shadeyly shady path. There is an exit.
+map
+0 0 0 0 0 0
+0 0 0 0 0 0
+3 2 1 X 0 0 
+4 0 0 0 0 0 
+0 0 0 0 0 0
+
+User request: Fast notation;
+travel east = t e
+search rock = s rock
+kick troll = kk troll
+loot = lt

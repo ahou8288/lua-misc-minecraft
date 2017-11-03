@@ -1,0 +1,212 @@
+print("Mob tower under construction.")
+print("Please stand clear.")
+local x=0
+
+local function turnr()
+	turtle.turnRight()
+	turtle.back()
+	turtle.turnRight()
+	turtle.back()
+end
+
+local i=1
+local i3=0
+local function icheck()
+	if turtle.getItemCount(i) ==0 then
+		i=i+1
+		turtle.select(i)
+		print("stack used")
+	end
+i3=i3+1
+end
+
+local function backplc()
+	turtle.back()
+	icheck()
+	turtle.place()
+end
+
+local function turnl()
+	turtle.turnLeft()
+	turtle.back()
+	turtle.turnLeft()
+	turtle.back()
+end
+
+local n=0
+local function backplace(n)
+	x=0
+	repeat
+		backplc()
+		x=x+1
+	until x==n
+end
+
+local function fwd(n)
+x=0
+	repeat
+		turtle.forward()
+		x=x+1
+	until x==n
+end
+
+local i2=0
+local function lyr1()
+i2=i2+1
+turtle.back()
+	if i2==1 then
+		turtle.turnRight()
+		turtle.turnRight()
+		fwd(9)
+		turtle.turnRight()
+		turtle.turnRight()
+	else
+		backplace(9)
+	end
+turnr()
+turtle.back()
+backplace(8)
+turnl()
+backplace(8)
+turnr()
+backplace(8)
+turnl()
+backplace(7)
+turnr()
+turtle.back()
+turtle.back()
+turtle.back()
+backplace(4)
+turnl()
+backplace(4)
+turnr()
+backplace(4)
+turnl()
+backplace(3)
+turnr()
+turtle.back()
+turtle.back()
+turtle.back()
+	if i2==4 then
+		turtle.turnRight()
+		backplace(9)
+	else
+		turtle.turnLeft()
+		fwd(9)
+	end
+print("Checkpoint Reached")
+end
+
+local n=0
+local function backup(n)
+	x=0
+	repeat
+		icheck()
+		turtle.placeUp()
+		backplc()
+		x=x+1
+	until x==n
+end
+
+local function lyr23()
+fwd(9)
+backup(1) 
+turtle.turnRight() turtle.forward() turtle.turnLeft()
+backup(4)
+turtle.back()
+backup(3)
+turnl()
+backup(3)
+turtle.back()
+backup(4)
+turnr()
+backup(4)
+turtle.back()
+backup(3)
+turtle.turnRight() turtle.forward() turtle.turnLeft()
+fwd(5)
+turtle.turnLeft() turtle.turnLeft()
+backup(3)
+turnr()
+turtle.back() turtle.back() turtle.back()
+backup(4)
+turnl()
+backup(4)
+turnr()
+backup(4)
+turnl()
+turtle.turnLeft() turtle.turnLeft()
+fwd(3)
+backup(4)
+turtle.turnLeft()
+fwd(8)
+print("Checkpoint Reached")
+end
+
+local i4=0
+function lyr45()
+i4=i4+1
+fwd(8)
+turtle.turnLeft()
+backup(4)
+turtle.turnRight() turtle.back()
+backup(3)
+turtle.turnLeft() turtle.back()
+backup(3)
+turtle.turnRight()
+turtle.back()
+backup(2)
+turtle.turnRight()
+backup(1)
+print("Etho Slabs")
+turtle.back()
+turtle.turnRight()
+turtle.back()
+turtle.turnLeft()
+turtle.select(16)
+backplace(1)
+turtle.back() turtle.back() turtle.back()
+turtle.turnRight()
+backplace(1)
+turtle.back() turtle.back() turtle.back()
+turtle.turnLeft()
+backplace(1)
+turtle.back()
+turtle.turnRight()
+fwd(6)
+turtle.select(i)
+turtle.turnLeft()
+print("1/4 down")
+end
+
+local function layercake1()
+lyr1()
+lyr1()
+lyr1()
+lyr1()
+turtle.up()
+print("Winning!")
+end
+
+local function layercake23()
+lyr23()
+lyr23()
+lyr23()
+lyr23()
+turtle.up()
+turtle.up()
+print("Level up!")
+end
+
+local function layercake45()
+lyr45()
+lyr45()
+lyr45()
+lyr45()
+turtle.up()
+turtle.up()
+print("Final Level Complete")
+end
+layercake1()
+layercake23()
+layercake45()

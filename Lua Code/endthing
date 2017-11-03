@@ -1,0 +1,46 @@
+slot=1
+turtle.select(slot)
+local function place()
+	if turtle.getItemCount(slot)=0 then
+		slot=slot+1
+	end
+	turtle.select(slot)
+	turtle.placeUp()
+end
+
+local function plc(n)
+	for i=1,n do
+		turtle.forward()
+		place()
+	end
+end
+
+local function level()
+	plc(26)
+	turtle.turnLeft()
+	plc(2)
+	turtle.turnLeft()
+	plc(26)
+	turtle.turnLeft()
+	plc(2)
+	turtle.turnLeft()
+end
+
+local function goup(n)
+	turtle.select(16)
+	for i=1,n do
+		turtle.placeDown()
+		turtle.up()
+	end
+end
+
+local function wholelevel(n)
+	for i=1,n do
+		turtle.back()
+		goup(3)
+		turtle.forward()
+		level()
+	end
+end
+level()
+wholelevel(13)
