@@ -1,0 +1,5 @@
+The pages to look at are;
+Software Log;
+	-Documentation
+	-Documentation Checklist
+You can look in the major work section for an example of what I did.
